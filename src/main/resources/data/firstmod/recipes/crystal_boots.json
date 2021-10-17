@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "c c",
+    "cnc"
+  ],
+  "key": {
+    "c": {
+      "item": "firstmod:charged_crystal"
+    },
+    "n": {
+      "item": "minecraft:netherite_boots"
+    }
+  },
+  "result": {
+    "item": "firstmod:crystal_boots",
+    "count": 1,
+    "nbt": "{Enchantments:[{id:\"depth_strider\",lvl:1s}]}"
+  }
+}

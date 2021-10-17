@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "s#s",
+    "s#s"
+  ],
+  "key": {
+    "#": {
+      "item": "firstmod:crystal_block"
+    },
+    "s": {
+      "item": "minecraft:sticks"
+    }
+  },
+  "result": {
+    "item": "firstmod:crystal_fence_gate",
+    "count": 1
+  }
+}

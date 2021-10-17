@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ccc",
+    " n ",
+    " s "
+  ],
+  "key": {
+    "c": {
+      "item": "firstmod:charged_crystal"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    },
+    "n": {
+      "item": "minecraft:netherite_pickaxe"
+    }
+  },
+  "result": {
+    "item": "firstmod:crystal_pickaxe",
+    "count": 1,
+    "nbt": "{Enchantments:[{id:\"minecraft:silk_touch\",lvl:1s}]}"
+  }
+}

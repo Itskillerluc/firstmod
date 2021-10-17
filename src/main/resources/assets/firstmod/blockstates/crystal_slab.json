@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "firstmod:block/crystal_slab"
+    },
+    "type=double": {
+      "model": "firstmod:block/crystal_block"
+    },
+    "type=top": {
+      "model": "firstmod:block/crystal_slab_top"
+    }
+  }
+}

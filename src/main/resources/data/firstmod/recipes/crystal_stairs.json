@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "firstmod:crystal_block"
+    }
+  },
+  "result": {
+    "item": "firstmod:crystal_stairs",
+    "count": 6
+  }
+}

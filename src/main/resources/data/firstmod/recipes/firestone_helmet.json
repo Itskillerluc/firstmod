@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ccc",
+    "cnc",
+    "   "
+  ],
+  "key": {
+    "c": {
+      "item": "firstmod:charged_firestone"
+    },
+    "n": {
+      "item": "firstmod:crystal_helmet"
+    }
+  },
+  "result": {
+    "item": "firstmod:firestone_helmet",
+    "count": 1,
+    "nbt": "{Enchantments:[{id:\"minecraft:fire_protection\",lvl:4s}]}"
+  }
+}

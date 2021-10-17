@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ccc",
+    "cnc",
+    "   "
+  ],
+  "key": {
+    "c": {
+      "item": "firstmod:charged_crystal"
+    },
+    "n": {
+      "item": "minecraft:netherite_helmet"
+    }
+  },
+  "result": {
+    "item": "firstmod:crystal_helmet",
+    "count": 1,
+    "nbt": "{Enchantments:[{id:\"aqua_infinity\",lvl:2s}]}"
+  }
+}

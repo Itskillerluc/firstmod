@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "cnc",
+    "ccc",
+    "ccc"
+  ],
+  "key": {
+    "c": {
+      "item": "firstmod:charged_crystal"
+    },
+    "n": {
+      "item": "minecraft:netherite_chestplate"
+    }
+  },
+  "result": {
+    "item": "firstmod:crystal_chestplate",
+    "count": 1,
+    "nbt": "{Enchantments:[{id:\"thorns\",lvl:1s}]}"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "firstmod:crystal"
+    }
+  ],
+  "result": {
+    "item": "firstmod:charged_crystal",
+    "count": 1
+  }
+}

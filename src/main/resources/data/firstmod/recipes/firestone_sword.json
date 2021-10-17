@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " c ",
+    " c ",
+    " n "
+  ],
+  "key": {
+    "c": {
+      "item": "firstmod:charged_firestone"
+    },
+    "n": {
+      "item": "firstmod:crystal_sword"
+    }
+  },
+  "result": {
+    "item": "firstmod:firestone_sword",
+    "count": 1,
+    "nbt": "{Enchantments:[{id:\"minecraft:fire_aspect\",lvl:2s}]}"
+  }
+}

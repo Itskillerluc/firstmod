@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "fnf",
+    "ncn",
+    "fnf"
+  ],
+  "key": {
+    "f": {
+      "item": "minecraft:fire_charge"
+    },
+    "c": {
+      "item": "firstmod:crystal"
+    },
+    "n": {
+      "item": "minecraft:netherrack"
+    }
+  },
+  "result": {
+    "item": "firstmod:firestone",
+    "count": 1
+  }
+}

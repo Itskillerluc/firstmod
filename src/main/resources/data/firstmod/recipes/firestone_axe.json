@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "cc ",
+    "cn ",
+    " s "
+  ],
+  "key": {
+    "c": {
+      "item": "firstmod:charged_firestone"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    },
+    "n": {
+      "item": "firstmod:crystal_axe"
+    }
+  },
+  "result": {
+    "item": "firstmod:firestone_axe",
+    "count": 1,
+    "nbt": "{Enchantments:[{id:\"minecraft:fortune\",lvl:1s}]}"
+  }
+}

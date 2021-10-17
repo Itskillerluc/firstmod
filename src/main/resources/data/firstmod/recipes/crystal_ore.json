@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "sqs",
+    "qaq",
+    "sqs"
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:stone"
+    },
+    "q": {
+      "item": "minecraft:quartz"
+    },
+    "a": {
+      "item": "minecraft:netherite_scrap"
+    }
+  },
+  "result": {
+    "item": "firstmod:crystal_ore",
+    "count": 1
+  }
+}

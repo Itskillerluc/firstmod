@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ccc",
+    "cnc",
+    "c c"
+  ],
+  "key": {
+    "c": {
+      "item": "firstmod:charged_crystal"
+    },
+    "n": {
+      "item": "minecraft:netherite_leggings"
+    }
+  },
+  "result": {
+    "item": "firstmod:crystal_leggings",
+    "count": 1,
+    "nbt": "{Enchantments:[{id:\"unbreaking\",lvl:1s}]}"
+  }
+}

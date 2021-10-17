@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "firstmod:firestone"
+    }
+  ],
+  "result": {
+    "item": "firstmod:charged_firestone",
+    "count": 1
+  }
+}

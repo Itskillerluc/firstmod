@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " c ",
+    " c ",
+    " n "
+  ],
+  "key": {
+    "c": {
+      "item": "firstmod:charged_crystal"
+    },
+    "n": {
+      "item": "minecraft:netherite_sword"
+    }
+  },
+  "result": {
+    "item": "firstmod:crystal_sword",
+    "count": 1,
+    "nbt": "{Enchantments:[{id:\"minecraft:knockback\",lvl:1s}]}"
+  }
+}

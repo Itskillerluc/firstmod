@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:stone_button",
+      "item": "firstmod:crystal_block"
+    }
+  ],
+  "result": {
+    "item": "firstmod:crystal_button",
+    "count": 2
+  }
+}

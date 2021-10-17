@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#c#",
+    "c#c",
+    "#c#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:apple"
+    },
+    "c": {
+      "item": "firstmod:crystal"
+    }
+  },
+  "result": {
+    "item": "minecraft:enchanted_golden_apple",
+    "count": 1
+  }
+}

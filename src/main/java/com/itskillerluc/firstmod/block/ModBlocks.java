@@ -1,0 +1,50 @@
+package com.itskillerluc.firstmod.block;
+
+import com.itskillerluc.firstmod.block.custom.FirestoneBlock;
+import com.itskillerluc.firstmod.firstmod;
+import com.itskillerluc.firstmod.item.ModItemGroup;
+import com.itskillerluc.firstmod.item.ModItems;
+import net.minecraft.block.*;
+import net.minecraft.block.material.Material;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
+import net.minecraftforge.common.ToolType;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.function.Supplier;
+
+public class ModBlocks {
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, firstmod.MOD_ID);
+
+    public static final RegistryObject<Block> CRYSTAL_ORE = registerBlock("crystal_ore", () -> new Block(AbstractBlock.Properties.of(Material.STONE).harvestLevel(4).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops().strength(10f)));
+    public static final RegistryObject<Block> CRYSTAL_BLOCK = registerBlock("crystal_block", () -> new Block(AbstractBlock.Properties.of(Material.HEAVY_METAL).harvestLevel(4).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops().strength(10f)));
+    public static final RegistryObject<Block> FIRESTONE_BLOCK = registerBlock("firestone_block", () -> new FirestoneBlock(AbstractBlock.Properties.of(Material.METAL).harvestLevel(3).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops().strength(7f)));
+    public static final RegistryObject<Block> CRYSTAL_STAIRS = registerBlock("crystal_stairs", () -> new StairsBlock(() -> CRYSTAL_BLOCK.get().defaultBlockState(), AbstractBlock.Properties.of(Material.HEAVY_METAL).harvestLevel(4).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> CRYSTAL_FENCE = registerBlock("crystal_fence", () -> new FenceBlock(AbstractBlock.Properties.of(Material.METAL).harvestLevel(3).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops().strength(7f)));
+    public static final RegistryObject<Block> CRYSTAL_FENCE_GATE = registerBlock("crystal_fence_gate", () -> new FenceGateBlock(AbstractBlock.Properties.of(Material.METAL).harvestLevel(3).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops().strength(7f)));
+    public static final RegistryObject<Block> CRYSTAL_SLAB = registerBlock("crystal_slab", () -> new SlabBlock(AbstractBlock.Properties.of(Material.METAL).harvestLevel(3).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops().strength(7f)));
+    public static final RegistryObject<Block> CRYSTAL_BUTTON = registerBlock("crystal_button", () -> new StoneButtonBlock(AbstractBlock.Properties.of(Material.METAL).harvestLevel(3).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops().strength(7f).noCollission()));
+    public static final RegistryObject<Block> CRYSTAL_PRESSURE_PLATE = registerBlock("crystal_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, AbstractBlock.Properties.of(Material.METAL).harvestLevel(3).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops().strength(7f)));
+    public static final RegistryObject<Block> CRYSTAL_DOOR = registerBlock("crystal_door", () -> new DoorBlock(AbstractBlock.Properties.of(Material.METAL).harvestLevel(3).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops().strength(7f).noOcclusion()));
+    public static final RegistryObject<Block> CRYSTAL_TRAPDOOR = registerBlock("crystal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.of(Material.METAL).harvestLevel(3).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops().strength(7f).noOcclusion()));
+
+
+
+    private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block){
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerBlockItem(name, toReturn);
+        return toReturn;
+    }
+
+    private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block){
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP)));
+    }
+
+
+    public static void register(IEventBus eventBus){
+        BLOCKS.register(eventBus);
+    }
+}
