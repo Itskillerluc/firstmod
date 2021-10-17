@@ -4,6 +4,8 @@ import com.itskillerluc.firstmod.block.ModBlocks;
 import com.itskillerluc.firstmod.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -59,6 +61,10 @@ public class firstmod
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().options);
+        event.enqueueWork(()-> {
+            RenderTypeLookup.setRenderLayer(ModBlocks.CRYSTAL_DOOR.get(), RenderType.cutout());
+            RenderTypeLookup.setRenderLayer(ModBlocks.CRYSTAL_TRAPDOOR.get(), RenderType.cutout());
+        });
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
