@@ -1,6 +1,7 @@
 package com.itskillerluc.firstmod.block;
 
 import com.itskillerluc.firstmod.block.custom.FirestoneBlock;
+import com.itskillerluc.firstmod.block.custom.magicHerbBlock;
 import com.itskillerluc.firstmod.firstmod;
 import com.itskillerluc.firstmod.item.ModItemGroup;
 import com.itskillerluc.firstmod.item.ModItems;
@@ -30,7 +31,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> CRYSTAL_PRESSURE_PLATE = registerBlock("crystal_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS, AbstractBlock.Properties.of(Material.METAL).harvestLevel(3).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops().strength(7f)));
     public static final RegistryObject<Block> CRYSTAL_DOOR = registerBlock("crystal_door", () -> new DoorBlock(AbstractBlock.Properties.of(Material.METAL).harvestLevel(3).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops().strength(7f).noOcclusion()));
     public static final RegistryObject<Block> CRYSTAL_TRAPDOOR = registerBlock("crystal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.of(Material.METAL).harvestLevel(3).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops().strength(7f).noOcclusion()));
-
+    public static final RegistryObject<Block> MAGICHERB = BLOCKS.register("magic_herb_crop", ()-> new magicHerbBlock(AbstractBlock.Properties.copy(Blocks.WHEAT)));
 
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block){

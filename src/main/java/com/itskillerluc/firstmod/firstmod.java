@@ -64,6 +64,8 @@ public class firstmod
         event.enqueueWork(()-> {
             RenderTypeLookup.setRenderLayer(ModBlocks.CRYSTAL_DOOR.get(), RenderType.cutout());
             RenderTypeLookup.setRenderLayer(ModBlocks.CRYSTAL_TRAPDOOR.get(), RenderType.cutout());
+
+            RenderTypeLookup.setRenderLayer(ModBlocks.MAGICHERB.get(), RenderType.cutout());
         });
     }
 
