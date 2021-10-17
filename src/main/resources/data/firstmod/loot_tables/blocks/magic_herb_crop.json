@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 100,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "firstmod:magic_herb"
+        }
+      ],
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "firstmod:magaic_herb"
+        }
+      ]
+    }
+  ]
+}

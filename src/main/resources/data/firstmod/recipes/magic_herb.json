@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "scs",
+    "csc",
+    "scs"
+  ],
+  "key": {
+    "c": {
+      "item": "firstmod:crystal"
+    },
+    "s": {
+      "item": "minecraft:wheat_seeds"
+    }
+  },
+  "result": {
+    "item": "firstmod:magic_herb",
+    "count": 4
+  }
+}

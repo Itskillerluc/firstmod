@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/crop",
   "textures": {
-    "crop": "firstmod:block/magicHerb_stage7"
+    "crop": "firstmod:block/magic_herb_stage6"
   }
 }
