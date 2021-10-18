@@ -33,6 +33,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> CRYSTAL_TRAPDOOR = registerBlock("crystal_trapdoor", () -> new TrapDoorBlock(AbstractBlock.Properties.of(Material.METAL).harvestLevel(3).harvestTool(ToolType.PICKAXE).requiresCorrectToolForDrops().strength(7f).noOcclusion()));
     public static final RegistryObject<Block> MAGICHERB = BLOCKS.register("magic_herb_crop", ()-> new magicHerbBlock(AbstractBlock.Properties.copy(Blocks.WHEAT)));
 
+    public static final RegistryObject<Block> MAGICAL_LOG = registerBlock("magical_log", () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> MAGICAL_WOOD = registerBlock("magical_wood", () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_MAGICAL_LOG = registerBlock("stripped_magical_log", () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_MAGICAL_WOOD = registerBlock("stripped_magical_wood", () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+    public static final RegistryObject<Block> MAGICAL_PLANKS = registerBlock("magical_planks", () -> new Block(AbstractBlock.Properties.copy(Blocks.OAK_PLANKS)));
+
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
