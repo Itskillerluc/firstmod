@@ -8,6 +8,7 @@ import com.itskillerluc.firstmod.item.ModItemGroup;
 import com.itskillerluc.firstmod.item.ModItems;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.trees.OakTree;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.ToolType;
@@ -40,6 +41,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> STRIPPED_MAGICAL_WOOD = registerBlock("stripped_magical_wood", () -> new RotatedPillarBlock(AbstractBlock.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
     public static final RegistryObject<Block> MAGICAL_PLANKS = registerBlock("magical_planks", () -> new Block(AbstractBlock.Properties.copy(Blocks.OAK_PLANKS)));
 
+    public static final RegistryObject<Block> MAGICAL_LEAVES = registerBlock("magical_leaves", () -> new LeavesBlock(AbstractBlock.Properties.of(Material.LEAVES).strength(0.2f).randomTicks().sound(SoundType.CROP).noOcclusion()));
+    public static final RegistryObject<Block> MAGICAL_SAPLING = registerBlock("magical_sapling", () -> new SaplingBlock(new OakTree(),AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
