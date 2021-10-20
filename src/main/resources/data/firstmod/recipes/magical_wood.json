@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    " ##",
+    " ##"
+  ],
+  "key": {
+    "#": {
+      "item": "firstmod:magical_log"
+    }
+  },
+  "result": {
+    "item": "firstmod:magical_wood",
+    "count": 4
+  }
+}

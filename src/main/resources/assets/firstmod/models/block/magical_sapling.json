@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "firstmod:block/magical_sapling"
+  }
+}
