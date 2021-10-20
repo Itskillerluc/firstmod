@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:magical_log"
+    }
+  ],
+  "result": {
+    "item": "firstmod:magical_planks",
+    "count": 4
+  }
+}
