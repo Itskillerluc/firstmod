@@ -3,6 +3,7 @@ package com.itskillerluc.firstmod.block;
 import com.itskillerluc.firstmod.block.custom.FirestoneBlock;
 import com.itskillerluc.firstmod.block.custom.magicHerbBlock;
 import com.itskillerluc.firstmod.block.custom.LogStrip;
+import com.itskillerluc.firstmod.block.custom.trees.MagicalTree;
 import com.itskillerluc.firstmod.firstmod;
 import com.itskillerluc.firstmod.item.ModItemGroup;
 import com.itskillerluc.firstmod.item.ModItems;
@@ -42,7 +43,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> MAGICAL_PLANKS = registerBlock("magical_planks", () -> new Block(AbstractBlock.Properties.copy(Blocks.OAK_PLANKS)));
 
     public static final RegistryObject<Block> MAGICAL_LEAVES = registerBlock("magical_leaves", () -> new LeavesBlock(AbstractBlock.Properties.of(Material.LEAVES).strength(0.2f).randomTicks().sound(SoundType.CROP).noOcclusion()));
-    public static final RegistryObject<Block> MAGICAL_SAPLING = registerBlock("magical_sapling", () -> new SaplingBlock(new OakTree(),AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> MAGICAL_SAPLING = registerBlock("magical_sapling", () -> new SaplingBlock(new MagicalTree(),AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

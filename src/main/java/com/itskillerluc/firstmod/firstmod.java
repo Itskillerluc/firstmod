@@ -66,6 +66,9 @@ public class firstmod
             RenderTypeLookup.setRenderLayer(ModBlocks.CRYSTAL_TRAPDOOR.get(), RenderType.cutout());
 
             RenderTypeLookup.setRenderLayer(ModBlocks.MAGICHERB.get(), RenderType.cutout());
+
+            RenderTypeLookup.setRenderLayer(ModBlocks.MAGICAL_LEAVES.get(), RenderType.cutout());
+            RenderTypeLookup.setRenderLayer(ModBlocks.MAGICAL_SAPLING.get(), RenderType.cutout());
         });
     }
 
