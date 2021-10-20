@@ -37,8 +37,8 @@ public class LogStrip extends RotatedPillarBlock {
     @Override
     public BlockState getToolModifiedState(BlockState state, World world, BlockPos pos, PlayerEntity player, ItemStack stack, ToolType toolType) {
 
-        if (toolType == ToolType.AXE && state.getBlockState() == ModBlocks.MAGICAL_LOG.get().defaultBlockState()) return ModBlocks.STRIPPED_MAGICAL_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
-        else if (toolType == ToolType.AXE && state.getBlockState() == ModBlocks.MAGICAL_WOOD.get().defaultBlockState()) return ModBlocks.STRIPPED_MAGICAL_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+        if (toolType == ToolType.AXE && state.getBlock().defaultBlockState() == ModBlocks.MAGICAL_LOG.get().defaultBlockState()) return ModBlocks.STRIPPED_MAGICAL_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+        else if (toolType == ToolType.AXE && state.getBlock().defaultBlockState() == ModBlocks.MAGICAL_WOOD.get().defaultBlockState()) return ModBlocks.STRIPPED_MAGICAL_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
         else return null;
     }
 }
