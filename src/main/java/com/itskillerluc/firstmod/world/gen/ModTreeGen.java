@@ -23,7 +23,7 @@ public class ModTreeGen {
         RegistryKey<Biome> key = RegistryKey.create(Registry.BIOME_REGISTRY, event.getName());
         Set<BiomeDictionary.Type> types = BiomeDictionary.getTypes(key);
 
-        if(types.contains(BiomeDictionary.Type.MAGICAL)){
+        if(types.contains(BiomeDictionary.Type.MESA)){
             List<Supplier<ConfiguredFeature<?, ?>>> base = event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
             base.add(() -> ModConfiguredFeatures.MAGICAL_TREE.decorated(Features.Placements.HEIGHTMAP).decorated(Placement.COUNT_EXTRA.configured(new AtSurfaceWithExtraConfig(1,0.01f, 0))));
         }
