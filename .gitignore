@@ -1,42 +1,33 @@
-# Git
+# Eclipse, Intellij, and VSCode
+
+*.iml
+*.ipr
+*.iws
+*.launch
+.classpath
+.idea
+.java-version
+.metadata
+.project
+.settings
+.vscode
+eclipse
+out
+src/test
+
+
+#Git and Gradle
 
 .gitattributes
-
-
-# Gradle
-
 .gradle
 bin
 build
 logs
 run
+run_server
 src/generated/resources/.cache
 
-
-# VSCode
-
-.vscode
-
-
-# IntelliJ Idea
-
-.idea
-*.iml
-*.ipr
-*.iws
-src/test
-
-
-# Eclipse
-
-.project
-*.launch
-
-# MacOS
+# MacOS and Windows
 
 .DS_Store
-
-
-# Windows
-
 desktop.ini
