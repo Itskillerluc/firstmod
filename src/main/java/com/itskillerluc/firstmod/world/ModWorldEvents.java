@@ -12,7 +12,7 @@ public class ModWorldEvents {
 
     @SubscribeEvent
     public static void biomeLoadingEvent(final BiomeLoadingEvent event){
-        ModOreGen.genOres(event);
+        //ModOreGen.CONFIGURED_CRYSTAL_ORE();
 
         ModTreeGen.genTrees(event);
     }
