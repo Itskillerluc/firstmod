@@ -1,6 +1,7 @@
 package com.itskillerluc.firstmod.world;
 
 import com.itskillerluc.firstmod.firstmod;
+import com.itskillerluc.firstmod.world.gen.ModOreGen;
 import com.itskillerluc.firstmod.world.gen.ModTreeGen;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -11,6 +12,8 @@ public class ModWorldEvents {
 
     @SubscribeEvent
     public static void biomeLoadingEvent(final BiomeLoadingEvent event){
+        ModOreGen.genOres(event);
+
         ModTreeGen.genTrees(event);
     }
 
