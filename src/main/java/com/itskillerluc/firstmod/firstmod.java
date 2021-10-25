@@ -2,6 +2,7 @@ package com.itskillerluc.firstmod;
 
 import com.itskillerluc.firstmod.block.ModBlocks;
 import com.itskillerluc.firstmod.item.ModItems;
+import com.itskillerluc.firstmod.world.gen.ModOreGen;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.renderer.RenderType;
@@ -56,6 +57,7 @@ public class firstmod
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {

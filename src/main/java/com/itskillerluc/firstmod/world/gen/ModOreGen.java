@@ -46,7 +46,7 @@ public class ModOreGen {
     }
 
     // register to the Forge event bus
-    public void biomeModification(final BiomeLoadingEvent event) {
+    public static void biomeModification(final BiomeLoadingEvent event) {
         event.getGeneration().getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).add(() -> CONFIGURED_CRYSTAL_ORE);
     }
 }
