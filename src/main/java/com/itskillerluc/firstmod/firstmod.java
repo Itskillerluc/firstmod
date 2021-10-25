@@ -57,7 +57,7 @@ public class firstmod
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
-
+        ModOreGen.commonSetup(event);
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
