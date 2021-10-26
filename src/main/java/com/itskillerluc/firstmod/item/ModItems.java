@@ -2,9 +2,7 @@ package com.itskillerluc.firstmod.item;
 
 import com.itskillerluc.firstmod.block.ModBlocks;
 import com.itskillerluc.firstmod.firstmod;
-import com.itskillerluc.firstmod.item.custom.Firestone;
-import com.itskillerluc.firstmod.item.custom.FirestoneGlint;
-import com.itskillerluc.firstmod.item.custom.RefineryKit;
+import com.itskillerluc.firstmod.item.custom.*;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.potion.EffectInstance;
@@ -84,6 +82,11 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterial.FIRESTONE, EquipmentSlotType.CHEST, new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP)));
     public static final RegistryObject<Item> FIRESTONE_HELMET = ITEMS.register("firestone_helmet",
             () -> new ArmorItem(ModArmorMaterial.FIRESTONE, EquipmentSlotType.HEAD, new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP)));
+
+    public static final RegistryObject<Item> CRYSTAL_HORSE_ARMOR = ITEMS.register("crystal_horse_armor",
+            () -> new crystalHorseArmor(15, "crystal", new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP)));
+    public static final RegistryObject<Item> FIRESTONE_HORSE_ARMOR = ITEMS.register("firestone_horse_armor",
+            () -> new firestoneHorseArmor(18, "firestone", new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP)));
 
     public static final RegistryObject<Item> MAGIC_HERBS = ITEMS.register("magic_herbs",
             () -> new BlockItem(ModBlocks.MAGICHERB.get(), new Item.Properties().food(new Food.Builder().alwaysEat().nutrition(5).saturationMod(1.5f).effect(new EffectInstance(Effects.CONFUSION,1200,5),0.5f).effect(new EffectInstance(Effects.WEAKNESS,1200,2),0.3f).effect(new EffectInstance(Effects.ABSORPTION,3000,2),0.3f).effect(new EffectInstance(Effects.DAMAGE_RESISTANCE,1000,2),0.2f).effect(new EffectInstance(Effects.MOVEMENT_SPEED,2000,3),0.7f).effect(new EffectInstance(Effects.POISON,700,2),0.2f).effect(new EffectInstance(Effects.DAMAGE_BOOST,1500,2),0.4f).effect(new EffectInstance(Effects.BLINDNESS,1200,5),0.4f).effect(new EffectInstance(Effects.NIGHT_VISION,1200,5),0.4f).build()).tab(ModItemGroup.FIRSTMODGROUP)));
