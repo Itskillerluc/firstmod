@@ -4,6 +4,7 @@ import com.itskillerluc.firstmod.block.ModBlocks;
 import com.itskillerluc.firstmod.firstmod;
 import com.itskillerluc.firstmod.item.custom.Firestone;
 import com.itskillerluc.firstmod.item.custom.FirestoneGlint;
+import com.itskillerluc.firstmod.item.custom.RefineryKit;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.potion.EffectInstance;
@@ -13,6 +14,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import org.lwjgl.system.CallbackI;
 
 public class ModItems {
     static class enchantmentGlow extends Item{
@@ -30,6 +32,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> CRYSTAL = ITEMS.register("crystal",
             () -> new Item(new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP)));
+    public static final RegistryObject<Item> RAW_CRYSTAL = ITEMS.register("raw_crystal",
+            () -> new Item(new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP)));
     public static final RegistryObject<Item> FIRESTONE = ITEMS.register("firestone",
             () -> new Firestone(new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP).durability(60)));
 
@@ -37,6 +41,9 @@ public class ModItems {
             () -> new enchantmentGlow(new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP)));
     public static final RegistryObject<Item> CHARGED_FIRESTONE = ITEMS.register("charged_firestone",
             () -> new FirestoneGlint(new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP).durability(150)));
+
+    public static final RegistryObject<Item> REFINERY_KIT = ITEMS.register("refinery_kit",
+            () -> new RefineryKit(new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP).durability(12)));
 
     public static final RegistryObject<Item> CRYSTAL_SWORD = ITEMS.register("crystal_sword",
             () -> new SwordItem(ModItemTier.CRYSTAL, 3, -2.5f, new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP)));

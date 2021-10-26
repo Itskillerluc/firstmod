@@ -18,7 +18,7 @@ public class ModOreGen {
     // register to the Mod event bus
     public static void commonSetup(FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-            CONFIGURED_CRYSTAL_ORE = Feature.ORE.configured(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.CRYSTAL_ORE.get().defaultBlockState(), 17)).range(128).squared().count(20);
+            CONFIGURED_CRYSTAL_ORE = Feature.ORE.configured(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.CRYSTAL_ORE.get().defaultBlockState(), 3)).range(35).squared().count(1);
 
             Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation(firstmod.MOD_ID, "crystal_ore"), CONFIGURED_CRYSTAL_ORE);
         });
