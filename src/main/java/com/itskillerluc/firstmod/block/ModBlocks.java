@@ -45,6 +45,8 @@ public class ModBlocks {
     public static final RegistryObject<Block> MAGICAL_LEAVES = registerBlock("magical_leaves", () -> new LeavesBlock(AbstractBlock.Properties.of(Material.LEAVES).strength(0.2f).randomTicks().sound(SoundType.CROP).noOcclusion()));
     public static final RegistryObject<Block> MAGICAL_SAPLING = registerBlock("magical_sapling", () -> new SaplingBlock(new MagicalTree(),AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
 
+    public static final RegistryObject<Block> Magical_flower = registerBlock("magical_flower", () -> new FlowerBlock(AbstractBlock.Properties.copy(Blocks.DANDELION)));
+
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
