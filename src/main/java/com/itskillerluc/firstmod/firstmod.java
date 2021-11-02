@@ -71,6 +71,7 @@ public class firstmod
 
             RenderTypeLookup.setRenderLayer(ModBlocks.MAGICAL_LEAVES.get(), RenderType.cutout());
             RenderTypeLookup.setRenderLayer(ModBlocks.MAGICAL_SAPLING.get(), RenderType.cutout());
+            RenderTypeLookup.setRenderLayer(ModBlocks.MAGICAL_FLOWER.get(), RenderType.cutout());
         });
     }
 
