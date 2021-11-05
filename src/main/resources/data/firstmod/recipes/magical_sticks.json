@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "",
+    "p",
+    "p"
+  ],
+  "key": {
+    "p": {
+      "item": "firstmod:magical_planks"
+    }
+  },
+  "result": {
+    "item": "firstmod:magical_sticks"
+  }
+}
