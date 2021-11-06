@@ -1,7 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "",
     "p",
     "p"
   ],
@@ -11,6 +10,7 @@
     }
   },
   "result": {
-    "item": "firstmod:magical_sticks"
+    "item": "firstmod:magical_sticks",
+    "count": 4
   }
 }

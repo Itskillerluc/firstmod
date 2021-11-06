@@ -30,9 +30,12 @@ public class ModItems {
 
     public static final RegistryObject<Item> CRYSTAL = ITEMS.register("crystal",
             () -> new Item(new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP)));
+
+
     public static final RegistryObject<Item> MAGIC_DUST = ITEMS.register("magic_dust",
             () -> new Item(new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP)));
-    public static final RegistryObject<Item> MAGIC_STICKS = ITEMS.register("magic_sticks",
+
+    public static final RegistryObject<Item> MAGICAL_STICKS = ITEMS.register("magical_sticks",
             () -> new Item(new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP)));
     public static final RegistryObject<Item> RAW_CRYSTAL = ITEMS.register("raw_crystal",
             () -> new Item(new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP)));
