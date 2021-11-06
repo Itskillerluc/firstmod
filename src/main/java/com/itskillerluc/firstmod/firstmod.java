@@ -2,7 +2,9 @@ package com.itskillerluc.firstmod;
 
 import com.itskillerluc.firstmod.block.ModBlocks;
 import com.itskillerluc.firstmod.item.ModItems;
+import com.itskillerluc.firstmod.tileentity.ModTileEntities;
 import com.itskillerluc.firstmod.world.gen.ModOreGen;
+import com.itskillerluc.inventory.container.ModContainers;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.renderer.RenderType;
@@ -39,6 +41,8 @@ public class firstmod
 
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+        ModTileEntities.register(eventBus);
+        ModContainers.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
