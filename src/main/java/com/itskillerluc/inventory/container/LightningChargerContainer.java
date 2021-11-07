@@ -22,7 +22,7 @@ public class LightningChargerContainer extends Container {
     private final IItemHandler playerInventory;
 
     public LightningChargerContainer(int windowId, World world, BlockPos pos, PlayerInventory playerInventory, PlayerEntity player) {
-        super(pMenuType, windowId);
+        super(ModContainers.LIGHTNING_CHARGER_CONTAINER.get(), windowId);
         this.tileEntity = world.getBlockEntity(pos);
         playerEntity = player;
         this.playerInventory = new InvWrapper(playerInventory);

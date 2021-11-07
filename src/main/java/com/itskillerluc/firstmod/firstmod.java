@@ -2,11 +2,13 @@ package com.itskillerluc.firstmod;
 
 import com.itskillerluc.firstmod.block.ModBlocks;
 import com.itskillerluc.firstmod.item.ModItems;
+import com.itskillerluc.firstmod.screen.LightningChargerScrn;
 import com.itskillerluc.firstmod.tileentity.ModTileEntities;
 import com.itskillerluc.firstmod.world.gen.ModOreGen;
 import com.itskillerluc.inventory.container.ModContainers;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.common.MinecraftForge;
@@ -76,6 +78,8 @@ public class firstmod
             RenderTypeLookup.setRenderLayer(ModBlocks.MAGICAL_LEAVES.get(), RenderType.cutout());
             RenderTypeLookup.setRenderLayer(ModBlocks.MAGICAL_SAPLING.get(), RenderType.cutout());
             RenderTypeLookup.setRenderLayer(ModBlocks.MAGICAL_FLOWER.get(), RenderType.cutout());
+
+            ScreenManager.register(ModContainers.LIGHTNING_CHARGER_CONTAINER.get(), LightningChargerScrn::new);
         });
     }
 

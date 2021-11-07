@@ -53,7 +53,7 @@ public class LightningChargerTile extends TileEntity {
             public boolean isItemValid(int slot, @Nonnull ItemStack stack) {
                 switch(slot){
                     case 0: return stack.getItem() == ModItems.CHARGED_CRYSTAL.get() || stack.getItem() == Items.GLASS_PANE;
-                    case 1: return stack.getItem() == ModItems.CRYSTAL.get() || stack.getItem() == ModItems.FIRESTONE.get();
+                    case 1: return stack.getItem() == ModItems.CRYSTAL.get() || stack.getItem() == ModItems.FIRESTONE.get() || stack.getItem() == ModItems.CHARGED_CRYSTAL.get() || stack.getItem() == ModItems.CHARGED_FIRESTONE.get();
                     case 2: return stack.getItem() == ModItems.MAGIC_DUST.get();
                     default:
                         return false;
@@ -96,12 +96,19 @@ public class LightningChargerTile extends TileEntity {
         boolean crystalInFirstSlot = this.itemHandler.getStackInSlot(0).getCount() > 0 && this.itemHandler.getStackInSlot(0).getItem() == ModItems.CHARGED_CRYSTAL.get();
         boolean crystalInSecondSlot = this.itemHandler.getStackInSlot(1).getCount() > 0 && this.itemHandler.getStackInSlot(1).getItem() == ModItems.CRYSTAL.get();
         boolean magicDustInThirdSlot = this.itemHandler.getStackInSlot(2).getCount() > 0 && this.itemHandler.getStackInSlot(2).getItem() == ModItems.MAGIC_DUST.get();
+        boolean firestoneInSecondSlot = this.itemHandler.getStackInSlot(1).getCount() > 0 && this.itemHandler.getStackInSlot(1).getItem() == ModItems.FIRESTONE.get();
 
         if (focusInFirstSlot && crystalInSecondSlot && magicDustInThirdSlot){
             this.itemHandler.getStackInSlot(1).shrink(1);
             this.itemHandler.getStackInSlot(2).shrink(1);
 
             this.itemHandler.insertItem(1, new ItemStack(ModItems.CHARGED_CRYSTAL.get()), false);
+        }
+        else if (crystalInFirstSlot && firestoneInSecondSlot && magicDustInThirdSlot){
+            this.itemHandler.getStackInSlot(0).shrink(1);
+            this.itemHandler.getStackInSlot(1).shrink(1);
+            this.itemHandler.getStackInSlot(2).shrink(1);
+            this.itemHandler.insertItem(1, new ItemStack(ModItems.CHARGED_FIRESTONE.get()), false);
         }
     }
 }
