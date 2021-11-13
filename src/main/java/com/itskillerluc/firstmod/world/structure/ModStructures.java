@@ -24,7 +24,7 @@ public class ModStructures {
 
     public static void setupStructures() {
         setupMapSpacingAndLand(TEMPLE.get(),
-                new StructureSeparationSettings(290, 210, 1234567890),
+                new StructureSeparationSettings(290, 280, 1234567890),
                 true);
     }
 
