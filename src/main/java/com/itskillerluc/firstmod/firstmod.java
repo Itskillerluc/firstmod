@@ -5,6 +5,7 @@ import com.itskillerluc.firstmod.item.ModItems;
 import com.itskillerluc.firstmod.screen.LightningChargerScrn;
 import com.itskillerluc.firstmod.tileentity.ModTileEntities;
 import com.itskillerluc.firstmod.world.gen.ModOreGen;
+import com.itskillerluc.firstmod.world.structure.ModStructures;
 import com.itskillerluc.inventory.container.ModContainers;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -45,6 +46,7 @@ public class firstmod
         ModBlocks.register(eventBus);
         ModTileEntities.register(eventBus);
         ModContainers.register(eventBus);
+        ModStructures.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
@@ -60,6 +62,9 @@ public class firstmod
 
     private void setup(final FMLCommonSetupEvent event)
     {
+        event.enqueueWork(() -> {
+            ModStructures.setupStructures();
+        });
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
