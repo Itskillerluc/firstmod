@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "minecraft:magical_log"
+      "item": "firstmod:magical_log"
     }
   ],
   "result": {

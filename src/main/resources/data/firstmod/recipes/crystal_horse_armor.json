@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "cs ",
+    "chc",
+    "cic"
+  ],
+  "key": {
+    "c": {
+      "item": "firstmod:charged_crystal"
+    },
+    "s": {
+      "item": "minecraft:saddle"
+    },
+    "h": {
+      "item": "minecraft:diamond_horse_armor"
+    },
+    "i": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "firstmod:crystal_horse_armor",
+    "count": 1
+  }
+}

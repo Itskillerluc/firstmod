@@ -1,6 +1,7 @@
 package com.itskillerluc.firstmod.block;
 
 import com.itskillerluc.firstmod.block.custom.FirestoneBlock;
+import com.itskillerluc.firstmod.block.custom.LightningChargerBlock;
 import com.itskillerluc.firstmod.block.custom.magicHerbBlock;
 import com.itskillerluc.firstmod.block.custom.LogStrip;
 import com.itskillerluc.firstmod.block.custom.trees.MagicalTree;
@@ -12,6 +13,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.trees.OakTree;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.potion.Effects;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -44,6 +46,11 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> MAGICAL_LEAVES = registerBlock("magical_leaves", () -> new LeavesBlock(AbstractBlock.Properties.of(Material.LEAVES).strength(0.2f).randomTicks().sound(SoundType.CROP).noOcclusion()));
     public static final RegistryObject<Block> MAGICAL_SAPLING = registerBlock("magical_sapling", () -> new SaplingBlock(new MagicalTree(),AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
+
+    public static final RegistryObject<Block> MAGICAL_FLOWER = registerBlock("magical_flower", () -> new FlowerBlock(Effects.REGENERATION, 50,AbstractBlock.Properties.copy(Blocks.DANDELION)));
+
+    public static final RegistryObject<Block> LIGHTNING_CHARGER = registerBlock("lightning_charger", () -> new LightningChargerBlock(AbstractBlock.Properties.of(Material.HEAVY_METAL)));
+
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

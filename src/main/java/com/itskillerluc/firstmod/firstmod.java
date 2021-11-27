@@ -2,8 +2,14 @@ package com.itskillerluc.firstmod;
 
 import com.itskillerluc.firstmod.block.ModBlocks;
 import com.itskillerluc.firstmod.item.ModItems;
+import com.itskillerluc.firstmod.screen.LightningChargerScrn;
+import com.itskillerluc.firstmod.tileentity.ModTileEntities;
+import com.itskillerluc.firstmod.world.gen.ModOreGen;
+import com.itskillerluc.firstmod.world.structure.ModStructures;
+import com.itskillerluc.inventory.container.ModContainers;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.common.MinecraftForge;
@@ -38,6 +44,9 @@ public class firstmod
 
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+        ModTileEntities.register(eventBus);
+        ModContainers.register(eventBus);
+        ModStructures.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
@@ -53,9 +62,13 @@ public class firstmod
 
     private void setup(final FMLCommonSetupEvent event)
     {
+        event.enqueueWork(() -> {
+            ModStructures.setupStructures();
+        });
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+        ModOreGen.commonSetup(event);
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
@@ -69,6 +82,9 @@ public class firstmod
 
             RenderTypeLookup.setRenderLayer(ModBlocks.MAGICAL_LEAVES.get(), RenderType.cutout());
             RenderTypeLookup.setRenderLayer(ModBlocks.MAGICAL_SAPLING.get(), RenderType.cutout());
+            RenderTypeLookup.setRenderLayer(ModBlocks.MAGICAL_FLOWER.get(), RenderType.cutout());
+
+            ScreenManager.register(ModContainers.LIGHTNING_CHARGER_CONTAINER.get(), LightningChargerScrn::new);
         });
     }
 

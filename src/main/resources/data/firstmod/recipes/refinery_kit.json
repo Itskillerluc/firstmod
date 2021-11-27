@@ -7,17 +7,17 @@
   ],
   "key": {
     "s": {
-      "item": "minecraft:stone"
+      "item": "minecraft:quartz"
     },
     "q": {
-      "item": "minecraft:quartz"
+      "item": "minecraft:paper"
     },
     "a": {
       "item": "minecraft:netherite_scrap"
     }
   },
   "result": {
-    "item": "firstmod:crystal_ore",
+    "item": "firstmod:refinery_kit",
     "count": 1
   }
 }

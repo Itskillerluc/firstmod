@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "fs ",
+    "fhf",
+    "fif"
+  ],
+  "key": {
+    "f": {
+      "item": "firstmod:charged_firestone"
+    },
+    "s": {
+      "item": "minecraft:saddle"
+    },
+    "h": {
+      "item": "firstmod:crystal_horse_armor"
+    },
+    "i": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "firstmod:firestone_horse_armor",
+    "count": 1
+  }
+}
