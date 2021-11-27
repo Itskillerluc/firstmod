@@ -63,6 +63,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> FIRESTONE_SWORD = ITEMS.register("firestone_sword",
             () -> new SwordItem(ModItemTier.FIRESTONE, 3, -2.5f, new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP)));
+
+    public static final RegistryObject<Item> SLIPPER = ITEMS.register("slipper",
+            () -> new Slipper(new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP).durability(1)));
+
     public static final RegistryObject<Item> FIRESTONE_PICKAXE = ITEMS.register("firestone_pickaxe",
             () -> new PickaxeItem(ModItemTier.FIRESTONE, -2, -2.9f, new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP)));
     public static final RegistryObject<Item> FIRESTONE_AXE = ITEMS.register("firestone_axe",

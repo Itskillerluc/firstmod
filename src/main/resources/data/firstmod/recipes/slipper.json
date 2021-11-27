@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "nnn",
+    "nsn",
+    "nnn"
+  ],
+  "key": {
+    "c": {
+      "item": "minecraft:nether_star"
+    },
+    "n": {
+      "item": "firstmod:firestone_sword"
+    }
+  },
+  "result": {
+    "item": "firstmod:slipper"
+  }
+}
