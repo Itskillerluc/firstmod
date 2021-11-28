@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "firstmod:crystal"
+      "item": "minecraft:milk_bucket"
     }
   ],
   "result": {
-    "item": "firstmod:charged_crystal",
+    "item": "firstmod:bucket_milk",
     "count": 1
   }
 }

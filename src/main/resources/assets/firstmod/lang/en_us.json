@@ -15,6 +15,9 @@
   "block.firstmod.magical_flower": "Magical Flower",
   "block.firstmod.lightning_charger": "Lightning Charger",
   "screen.firstmod.lightning_charger": "Lightning Charger",
+
+  "fluid.firstmod.milk": "milk",
+
   "block.firstmod.crystal_door": "Crystal Door",
   "block.firstmod.crystal_trapdoor": "Crystal Trapdoor",
   "block.firstmod.magic_herb_crop": "Magical Herbs",

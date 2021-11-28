@@ -2,17 +2,19 @@ package com.itskillerluc.firstmod.item;
 
 import com.itskillerluc.firstmod.block.ModBlocks;
 import com.itskillerluc.firstmod.firstmod;
+import com.itskillerluc.firstmod.fluid.ModFluids;
 import com.itskillerluc.firstmod.item.custom.*;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.EffectType;
+
 import net.minecraft.potion.Effects;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
+
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import org.lwjgl.system.CallbackI;
+
 
 public class ModItems {
     static class enchantmentGlow extends Item{
@@ -75,6 +77,9 @@ public class ModItems {
             () -> new ShovelItem(ModItemTier.FIRESTONE, -2, -2.7f, new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP)));
     public static final RegistryObject<Item> FIRESTONE_HOE = ITEMS.register("firestone_hoe",
             () -> new HoeItem(ModItemTier.FIRESTONE, -2, -2.7f, new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP)));
+
+    public static final RegistryObject<Item> BUCKET_MILK = ITEMS.register("bucket_milk",
+            () -> new BucketItem(() -> ModFluids.MILK_FLUID.get(), new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP).stacksTo(1)));
 
     public static final RegistryObject<Item> CRYSTAL_BOOTS = ITEMS.register("crystal_boots",
             () -> new ArmorItem(ModArmorMaterial.CRYSTAL, EquipmentSlotType.FEET, new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP)));

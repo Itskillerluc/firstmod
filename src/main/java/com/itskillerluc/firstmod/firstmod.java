@@ -1,6 +1,7 @@
 package com.itskillerluc.firstmod;
 
 import com.itskillerluc.firstmod.block.ModBlocks;
+import com.itskillerluc.firstmod.fluid.ModFluids;
 import com.itskillerluc.firstmod.item.ModItems;
 import com.itskillerluc.firstmod.screen.LightningChargerScrn;
 import com.itskillerluc.firstmod.tileentity.ModTileEntities;
@@ -47,6 +48,7 @@ public class firstmod
         ModTileEntities.register(eventBus);
         ModContainers.register(eventBus);
         ModStructures.register(eventBus);
+        ModFluids.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
@@ -85,6 +87,9 @@ public class firstmod
             RenderTypeLookup.setRenderLayer(ModBlocks.MAGICAL_FLOWER.get(), RenderType.cutout());
 
             ScreenManager.register(ModContainers.LIGHTNING_CHARGER_CONTAINER.get(), LightningChargerScrn::new);
+            RenderTypeLookup.setRenderLayer(ModFluids.MILK_FLUID.get(), RenderType.translucent());
+            RenderTypeLookup.setRenderLayer(ModFluids.MILK_FLOWING.get(), RenderType.translucent());
+            RenderTypeLookup.setRenderLayer(ModFluids.MILK_BLOCK.get(), RenderType.translucent());
         });
     }
 
