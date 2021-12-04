@@ -106,6 +106,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> MAGIC_HERBS = ITEMS.register("magic_herbs",
             () -> new BlockItem(ModBlocks.MAGICHERB.get(), new Item.Properties().food(new Food.Builder().alwaysEat().nutrition(5).saturationMod(1.5f).effect(new EffectInstance(Effects.CONFUSION,1200,5),0.5f).effect(new EffectInstance(Effects.WEAKNESS,1200,2),0.3f).effect(new EffectInstance(Effects.ABSORPTION,3000,2),0.3f).effect(new EffectInstance(Effects.DAMAGE_RESISTANCE,1000,2),0.2f).effect(new EffectInstance(Effects.MOVEMENT_SPEED,2000,3),0.7f).effect(new EffectInstance(Effects.POISON,700,2),0.2f).effect(new EffectInstance(Effects.DAMAGE_BOOST,1500,2),0.4f).effect(new EffectInstance(Effects.BLINDNESS,1200,5),0.4f).effect(new EffectInstance(Effects.NIGHT_VISION,1200,5),0.4f).build()).tab(ModItemGroup.FIRSTMODGROUP)));
+    public static final RegistryObject<Item> CORN_SEEDS = ITEMS.register("corn_seeds", () -> new BlockItem(ModBlocks.CORN.get(), new Item.Properties().tab((ModItemGroup.FIRSTMODGROUP))));
 
 
     public static void register(IEventBus eventBus){

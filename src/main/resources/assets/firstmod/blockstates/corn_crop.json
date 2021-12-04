@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "growth=bottom0": {
+      "model": "firstmod:block/corn/bottom0"
+    },
+    "growth=bottom1": {
+      "model": "firstmod:block/corn/bottom1"
+    },
+    "growth=bottom2": {
+      "model": "firstmod:block/corn/bottom2"
+    },
+    "growth=top0": {
+      "model": "firstmod:block/corn/top0"
+    }
+  }
+}
