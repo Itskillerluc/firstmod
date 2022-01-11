@@ -4,6 +4,7 @@ import com.itskillerluc.firstmod.block.custom.FirestoneBlock;
 import com.itskillerluc.firstmod.block.custom.LightningChargerBlock;
 import com.itskillerluc.firstmod.block.custom.magicHerbBlock;
 import com.itskillerluc.firstmod.block.custom.LogStrip;
+import com.itskillerluc.firstmod.block.custom.plant.CornBlock;
 import com.itskillerluc.firstmod.block.custom.trees.MagicalTree;
 import com.itskillerluc.firstmod.firstmod;
 import com.itskillerluc.firstmod.item.ModItemGroup;
@@ -50,7 +51,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> MAGICAL_FLOWER = registerBlock("magical_flower", () -> new FlowerBlock(Effects.REGENERATION, 50,AbstractBlock.Properties.copy(Blocks.DANDELION)));
 
     public static final RegistryObject<Block> LIGHTNING_CHARGER = registerBlock("lightning_charger", () -> new LightningChargerBlock(AbstractBlock.Properties.of(Material.HEAVY_METAL)));
-
+    public static final RegistryObject<Block> CORN = BLOCKS.register("corn_crop", () -> new CornBlock(AbstractBlock.Properties.of(Material.PLANT).sound(SoundType.CROP).noCollission().strength(0).randomTicks()));
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "firstmod:firestone"
+      "item": "firstmod:bucket_milk"
     }
   ],
   "result": {
-    "item": "firstmod:charged_firestone",
+    "item": "minecraft:milk_bucket",
     "count": 1
   }
 }

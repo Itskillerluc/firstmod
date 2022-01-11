@@ -2,17 +2,19 @@ package com.itskillerluc.firstmod.item;
 
 import com.itskillerluc.firstmod.block.ModBlocks;
 import com.itskillerluc.firstmod.firstmod;
+import com.itskillerluc.firstmod.fluid.ModFluids;
 import com.itskillerluc.firstmod.item.custom.*;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.EffectType;
+
 import net.minecraft.potion.Effects;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
+
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import org.lwjgl.system.CallbackI;
+
 
 public class ModItems {
     static class enchantmentGlow extends Item{
@@ -63,6 +65,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> FIRESTONE_SWORD = ITEMS.register("firestone_sword",
             () -> new SwordItem(ModItemTier.FIRESTONE, 3, -2.5f, new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP)));
+
+    public static final RegistryObject<Item> SLIPPER = ITEMS.register("slipper",
+            () -> new Slipper(new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP).durability(1)));
+
     public static final RegistryObject<Item> FIRESTONE_PICKAXE = ITEMS.register("firestone_pickaxe",
             () -> new PickaxeItem(ModItemTier.FIRESTONE, -2, -2.9f, new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP)));
     public static final RegistryObject<Item> FIRESTONE_AXE = ITEMS.register("firestone_axe",
@@ -71,6 +77,9 @@ public class ModItems {
             () -> new ShovelItem(ModItemTier.FIRESTONE, -2, -2.7f, new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP)));
     public static final RegistryObject<Item> FIRESTONE_HOE = ITEMS.register("firestone_hoe",
             () -> new HoeItem(ModItemTier.FIRESTONE, -2, -2.7f, new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP)));
+
+    public static final RegistryObject<Item> BUCKET_MILK = ITEMS.register("bucket_milk",
+            () -> new BucketItem(() -> ModFluids.MILK_FLUID.get(), new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP).stacksTo(1)));
 
     public static final RegistryObject<Item> CRYSTAL_BOOTS = ITEMS.register("crystal_boots",
             () -> new ArmorItem(ModArmorMaterial.CRYSTAL, EquipmentSlotType.FEET, new Item.Properties().tab(ModItemGroup.FIRSTMODGROUP)));
@@ -97,6 +106,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> MAGIC_HERBS = ITEMS.register("magic_herbs",
             () -> new BlockItem(ModBlocks.MAGICHERB.get(), new Item.Properties().food(new Food.Builder().alwaysEat().nutrition(5).saturationMod(1.5f).effect(new EffectInstance(Effects.CONFUSION,1200,5),0.5f).effect(new EffectInstance(Effects.WEAKNESS,1200,2),0.3f).effect(new EffectInstance(Effects.ABSORPTION,3000,2),0.3f).effect(new EffectInstance(Effects.DAMAGE_RESISTANCE,1000,2),0.2f).effect(new EffectInstance(Effects.MOVEMENT_SPEED,2000,3),0.7f).effect(new EffectInstance(Effects.POISON,700,2),0.2f).effect(new EffectInstance(Effects.DAMAGE_BOOST,1500,2),0.4f).effect(new EffectInstance(Effects.BLINDNESS,1200,5),0.4f).effect(new EffectInstance(Effects.NIGHT_VISION,1200,5),0.4f).build()).tab(ModItemGroup.FIRSTMODGROUP)));
+    public static final RegistryObject<Item> CORN_SEEDS = ITEMS.register("corn_seeds", () -> new BlockItem(ModBlocks.CORN.get(), new Item.Properties().tab((ModItemGroup.FIRSTMODGROUP))));
 
 
     public static void register(IEventBus eventBus){
