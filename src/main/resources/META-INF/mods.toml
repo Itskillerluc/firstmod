@@ -5,7 +5,7 @@ issueTrackerURL="https://github.com/Itskillerluc/firstmod/issues"
 [[mods]]
 modId="firstmod"
 version="${file.jarVersion}"
-displayName="firstmod"
+displayName="First Mod"
 # displayURL="https://itskillerluc.github.io/firstmod"
 logoFile="icon.png"
 credits="Almost everything was done by Itskillerluc."

@@ -32,7 +32,7 @@ body:
     required: true
 - type: input
   attributes:
-    label: "firstmod Version"
+    label: "First Mod Version"
     placeholder: "Type Here"
   validations:
     required: true
