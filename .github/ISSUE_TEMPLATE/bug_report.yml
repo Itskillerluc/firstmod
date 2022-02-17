@@ -1,21 +1,21 @@
 name: Bug Report
-description: File a bug report
+description: File a Bug Report
 labels: [bug]
 assignees:
-  - itskillerluc
+  - "itskillerluc"
 body:
 - type: markdown
   attributes:
     value: |
-      Before submitting a bug report, please make sure you have read this *entire* form, and that:
-      - Your bug is not a vanilla bug/another mod's bug
-      - Your issue has not been reported before (make sure to use the [search function](https://github.com/itskillerluc/firstmod/issues)!)
+      Before submitting a bug report, please make sure you have read and filled out this form entirely, and that:
+      - Your bug isn't a vanilla bug or another mod's bug
+      - Your issue isn't a duplicate (make sure to use the search function!)
 
-      **Do not forget to give your issue a descriptive title.** "there's a bug" isn't useful, and it makes it harder to distinguish issues at a glance.
+      **Don't forget to give your issue a descriptive title.** "It Crashes" isn't useful information, and it's annoying for the devs.
 - type: dropdown
   attributes:
     label: "Operating System"
-    description: "Select the operating system(s) that this bug has occured on."
+    description: "Select the operating system(s) this bug occurs on."
     multiple: true
     options:
     - "Windows"
@@ -32,37 +32,43 @@ body:
     required: true
 - type: input
   attributes:
+    label: "First Mod Version"
+    placeholder: "Type Here"
+  validations:
+    required: true
+- type: input
+  attributes:
     label: "Forge Version"
     placeholder: "Type Here"
   validations:
     required: true
 - type: input
   attributes:
-    label: "firstmod Version"
+    label: "Singleplayer or Multiplayer"
     placeholder: "Type Here"
   validations:
     required: true
 - type: textarea
   attributes:
     label: "Description"
-    description: "What happened, and what did you expect to happen?"
+    description: "Write what happened and what you expected to happen here."
     placeholder: "Type Here"
   validations:
     required: true
 - type: textarea
   attributes:
     label: "Steps to Reproduce"
-    description: "A bulleted list of steps you took to produce the bug."
+    description: "Create a bulleted list of steps you took to produce the bug."
     placeholder: "Type Here"
   validations:
     required: true
 - type: textarea
   attributes:
     label: "Other Mod(s) Involved"
-    description: "Do you require another mod/other mods to reproduce this crash? If you do, list the it/them here."
+    description: "List other mods involved in the bug here."
     placeholder: "Type Here"
   validations:
-    required: true
+    required: false
 - type: textarea
   attributes:
     label: "Suspected Cause"
@@ -70,11 +76,10 @@ body:
     placeholder: "Type Here"
   validations:
     required: false
-- type: checkboxes
+- type: textarea
   attributes:
-    label: "Confirm the Following"
-    options:
-      - label: "I have checked for other issues that are the same"
-        required: true
-      - label: "I am not using performance enhancers, such as Optifine, Sodium, MCMT, etc."
-        required: true
+    label: "Log(s)"
+    description: "Upload any relevant logs to a site such as https://pastebin.com or https://gist.github.com, and put any links here."
+    placeholder: "Type Here"
+  validations:
+    required: false
