@@ -2,7 +2,7 @@ name: Bug Report
 description: File a Bug Report
 labels: [bug]
 assignees:
-  - "itskillerluc" # Repo Owner
+  - "itskillerluc"
 body:
 - type: markdown
   attributes:
@@ -32,13 +32,13 @@ body:
     required: true
 - type: input
   attributes:
-    label: "Firstmod Version" # Modloader
+    label: "firstmod Version"
     placeholder: "Type Here"
   validations:
     required: true
 - type: input
   attributes:
-    label: "Forge Version" # Mod Name
+    label: "Forge Version"
     placeholder: "Type Here"
   validations:
     required: true
